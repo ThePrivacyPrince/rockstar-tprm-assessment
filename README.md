@@ -72,7 +72,7 @@ rockstar-tprm-assessment/
 
 - **ISO 27001:2022** — Annex A controls A.5.19, A.5.20, A.5.21, A.5.22, A.8.3, A.8.5, A.8.16, A.8.24, A.5.23
 - **NIST SP 800-161** — Supply chain risk management
-- **PCI DSS v4.0** — Requirement 12.8 third-party obligations
+- **PCI DSS v4.0** — Requirement 12.8 Risk to information assets associated with third-party service provider relationships is manageed
 
 ## Tech Stack
 

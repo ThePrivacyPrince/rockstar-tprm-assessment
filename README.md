@@ -1,4 +1,4 @@
-# Rockstar Games × Anodot — TPRM Postmortem & Risk Assessment Engine
+# Rockstar Games × Anodot: TPRM Postmortem & Risk Assessment Engine
 
 > A real-world third-party risk assessment framework built from the 
 > April 2026 ShinyHunters breach of Rockstar Games via their vendor Anodot.
@@ -8,7 +8,7 @@
 
 ## The Breach — What Happened
 
-On April 14, 2026, hacking group ShinyHunters leaked 78.6 million records from Rockstar Games. The attack did not breach Rockstar directly. Instead, attackers compromised Anodot — a SaaS cloud cost monitoring platform that Rockstar used — extracted long-lived authentication tokens, and used them to silently traverse into Rockstar's connected Snowflake data warehouse.
+On April 14, 2026, hacking group ShinyHunters leaked 78.6 million records from Rockstar Games. The attack did not breach Rockstar directly. Instead, attackers compromised Anodot, a SaaS cloud cost monitoring platform that Rockstar used, extracted long-lived authentication tokens, and used them to silently traverse into Rockstar's connected Snowflake data warehouse.
 
 **The attack chain:**
 

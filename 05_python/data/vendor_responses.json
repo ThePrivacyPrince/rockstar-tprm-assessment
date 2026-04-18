@@ -1,0 +1,62 @@
+{
+  "vendor": "Anodot",
+  "assessment_date": "2026-04-14",
+  "framework": "ISO 27001:2022",
+  "context": "Assessment conducted post-breach as part of Rockstar Games TPRM postmortem. Scores reflect inferred control state based on breach evidence.",
+  "responses": [
+    {
+      "control_id": "A.5.19",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "No formal credential protection policy found. Token storage allowed direct extraction by attackers."
+    },
+    {
+      "control_id": "A.5.20",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "No breach notification SLA in contract. Rockstar learned of compromise 7 days after the fact via dark web post not from Anodot."
+    },
+    {
+      "control_id": "A.5.21",
+      "score": 2,
+      "status": "Partial",
+      "evidence": "Anodot own infrastructure was the initial attack surface indicating sub-processor security was not fully assessed."
+    },
+    {
+      "control_id": "A.5.22",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "Connector outage on April 4 was not communicated to Rockstar. No shared monitoring dashboard existed."
+    },
+    {
+      "control_id": "A.5.23",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "No cloud security requirements documented in contract covering Snowflake integration scope."
+    },
+    {
+      "control_id": "A.8.3",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "Tokens granted warehouse wide access enabling mass exfiltration of 78.6 million records."
+    },
+    {
+      "control_id": "A.8.5",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "Long lived static tokens extracted and reused by attackers. No rotation policy or expiry enforced."
+    },
+    {
+      "control_id": "A.8.16",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "Silent exfiltration went undetected for 10 days. No behavioral monitoring on query volume or off hours access."
+    },
+    {
+      "control_id": "A.8.24",
+      "score": 1,
+      "status": "Not Implemented",
+      "evidence": "Token extraction from Anodot systems suggests tokens were not adequately encrypted at rest."
+    }
+  ]
+}

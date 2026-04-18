@@ -1,0 +1,174 @@
+{
+  "vendor": "Anodot",
+  "saq_date": "2026-04-14",
+  "responses": [
+    {
+      "question_id": "1.1",
+      "question": "Are authentication tokens short lived under 24 hours?",
+      "answer": "no",
+      "breach_relevance": "Root cause of attacker persistence after token theft"
+    },
+    {
+      "question_id": "1.2",
+      "question": "Is OAuth 2.0 or equivalent used for all service to service authentication?",
+      "answer": "no",
+      "breach_relevance": "Static tokens enabled silent lateral movement into Snowflake"
+    },
+    {
+      "question_id": "1.3",
+      "question": "Are service account tokens rotated on a schedule of 90 days or less?",
+      "answer": "no",
+      "breach_relevance": "No rotation policy meant stolen tokens had indefinite validity"
+    },
+    {
+      "question_id": "1.4",
+      "question": "Are authentication tokens stored in a secrets manager?",
+      "answer": "no",
+      "breach_relevance": "Token extraction from Anodot systems suggests insecure storage"
+    },
+    {
+      "question_id": "1.5",
+      "question": "Is MFA enforced on all service accounts with access to production data warehouses?",
+      "answer": "no",
+      "breach_relevance": "Service account compromise enabled unrestricted Snowflake access"
+    },
+    {
+      "question_id": "1.6",
+      "question": "Are tokens scoped to least privilege access only?",
+      "answer": "no",
+      "breach_relevance": "Warehouse wide access enabled exfiltration of 78.6 million records"
+    },
+    {
+      "question_id": "1.7",
+      "question": "Is there automated alerting when tokens are used outside normal behavior patterns?",
+      "answer": "no",
+      "breach_relevance": "No behavioral alerting allowed 10 days of silent access"
+    },
+    {
+      "question_id": "2.1",
+      "question": "Do you have a documented incident response plan for third party integration breaches?",
+      "answer": "no",
+      "breach_relevance": "Absence of IR plan contributed to 7 day notification delay"
+    },
+    {
+      "question_id": "2.2",
+      "question": "What is your contractual SLA for notifying customers of a security incident?",
+      "answer": "no",
+      "breach_relevance": "No SLA meant Rockstar found out via dark web not from Anodot"
+    },
+    {
+      "question_id": "2.3",
+      "question": "Do you have SIEM or anomaly detection covering your integration pipeline?",
+      "answer": "no",
+      "breach_relevance": "Silent exfiltration went undetected across multiple customer environments"
+    },
+    {
+      "question_id": "2.4",
+      "question": "How do you detect unauthorized use of authentication tokens issued to your platform?",
+      "answer": "no",
+      "breach_relevance": "Token reuse was completely invisible to Anodot and Rockstar"
+    },
+    {
+      "question_id": "2.5",
+      "question": "Are customers notified when connector services go offline unexpectedly?",
+      "answer": "no",
+      "breach_relevance": "April 4 outage was not communicated giving attackers a 10 day head start"
+    },
+    {
+      "question_id": "3.1",
+      "question": "Is access to customer data warehouses scoped to minimum required schemas only?",
+      "answer": "no",
+      "breach_relevance": "Full warehouse access enabled mass record exfiltration"
+    },
+    {
+      "question_id": "3.2",
+      "question": "Are privileged access reviews conducted quarterly?",
+      "answer": "no",
+      "breach_relevance": "Over permissioned access likely accumulated over time unchecked"
+    },
+    {
+      "question_id": "3.3",
+      "question": "Is network access for integrations restricted by IP allowlist?",
+      "answer": "no",
+      "breach_relevance": "Stolen tokens could be used from any IP address worldwide"
+    },
+    {
+      "question_id": "3.4",
+      "question": "Are read and write permissions separated for analytics versus operational access?",
+      "answer": "no",
+      "breach_relevance": "Analytics tool should have been read only preventing data manipulation"
+    },
+    {
+      "question_id": "3.5",
+      "question": "Do you log all queries made to connected customer data environments?",
+      "answer": "no",
+      "breach_relevance": "No query logging meant no forensics trail after the breach"
+    },
+    {
+      "question_id": "4.1",
+      "question": "Do you maintain an inventory of sub-processors with access to customer data?",
+      "answer": "partial",
+      "breach_relevance": "Anodot pipeline was the attack surface suggesting incomplete sub-processor visibility"
+    },
+    {
+      "question_id": "4.2",
+      "question": "Are sub-processors subject to the same security requirements as your platform?",
+      "answer": "no",
+      "breach_relevance": "Weak link in Anodot chain enabled the pivot to Rockstar"
+    },
+    {
+      "question_id": "4.3",
+      "question": "Do you conduct annual security assessments of sub-processors?",
+      "answer": "no",
+      "breach_relevance": "Unassessed components created unknown risk that attackers exploited"
+    },
+    {
+      "question_id": "4.4",
+      "question": "Do you hold a current SOC 2 Type II or ISO 27001 certification?",
+      "answer": "no",
+      "breach_relevance": "Third party validation would have surfaced token and access control failures"
+    },
+    {
+      "question_id": "4.5",
+      "question": "Do you log security events?",
+      "answer": "no",
+      "breach_relevance": "No security event logging meant silent exfiltration went undetected for 10 days"
+    },
+    {
+      "question_id": "4.15",
+      "question": "Do you employ a third party to test your infrastructure security?",
+      "answer": "no",
+      "breach_relevance": "Independent security testing would have surfaced token storage weaknesses"
+    },
+    {
+      "question_id": "3.13",
+      "question": "Do you employ penetration testing?",
+      "answer": "no",
+      "breach_relevance": "Connector infrastructure pen test would have identified token exposure risk"
+    },
+    {
+      "question_id": "5.1",
+      "question": "Do you have an incident response team?",
+      "answer": "no",
+      "breach_relevance": "No IR team contributed to 7 day delay in notifying Rockstar"
+    },
+    {
+      "question_id": "5.2",
+      "question": "Have you tested your incident response process?",
+      "answer": "no",
+      "breach_relevance": "Untested IR process failed when real breach occurred"
+    },
+    {
+      "question_id": "5.3",
+      "question": "Do you have a business continuity plan?",
+      "answer": "no",
+      "breach_relevance": "April 4 connector outage had no recovery communication to customers"
+    },
+    {
+      "question_id": "5.5",
+      "question": "Do you have a process to remediate new risks?",
+      "answer": "no",
+      "breach_relevance": "Token theft via SaaS integrations was a known pattern from prior ShinyHunters attacks"
+    }
+  ]
+}

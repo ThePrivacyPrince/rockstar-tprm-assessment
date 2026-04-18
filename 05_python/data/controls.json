@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "framework": "ISO 27001:2022",
+    "version": "1.0",
+    "assessment_target": "Anodot",
+    "date": "2026-04-14",
+    "case_study": "Rockstar Games / ShinyHunters Breach"
+  },
+  "controls": [
+    {
+      "id": "A.5.19",
+      "name": "Information Security in Supplier Relationships",
+      "category": "Supplier Relations",
+      "weight": "critical",
+      "breach_relevance": "Anodot had no formal policy governing credential protection for customer integrations",
+      "question": "Do you have a formal security policy governing how you handle customer integrations and credentials?"
+    },
+    {
+      "id": "A.5.20",
+      "name": "Addressing Security Within Supplier Agreements",
+      "category": "Supplier Relations",
+      "weight": "critical",
+      "breach_relevance": "No breach notification SLA existed. Rockstar found out 7 days after compromise via dark web post",
+      "question": "Does your customer contract include breach notification timelines and token management requirements?"
+    },
+    {
+      "id": "A.5.21",
+      "name": "Managing Security in the ICT Supply Chain",
+      "category": "Supplier Relations",
+      "weight": "high",
+      "breach_relevance": "Anodot own infrastructure was compromised first indicating weak internal supply chain security",
+      "question": "Do you conduct security assessments of your own sub-processors and infrastructure components?"
+    },
+    {
+      "id": "A.5.22",
+      "name": "Monitoring and Review of Supplier Services",
+      "category": "Supplier Relations",
+      "weight": "critical",
+      "breach_relevance": "Rockstar had no real time visibility into Anodot connector health or query behavior",
+      "question": "Do customers have real time visibility into your service health and integration activity?"
+    },
+    {
+      "id": "A.5.23",
+      "name": "Information Security for Use of Cloud Services",
+      "category": "Cloud Security",
+      "weight": "critical",
+      "breach_relevance": "No cloud service security requirements existed in the Anodot contract covering Snowflake access",
+      "question": "Are cloud service security requirements formally defined in customer agreements?"
+    },
+    {
+      "id": "A.8.3",
+      "name": "Information Access Restriction",
+      "category": "Access Control",
+      "weight": "critical",
+      "breach_relevance": "Anodot tokens had warehouse wide access when only specific schema access was needed",
+      "question": "Are authentication tokens scoped to least privilege access per schema only?"
+    },
+    {
+      "id": "A.8.5",
+      "name": "Secure Authentication",
+      "category": "Access Control",
+      "weight": "critical",
+      "breach_relevance": "Static long lived tokens were extracted and reused by attackers with no expiry",
+      "question": "Are tokens short lived, rotated regularly, and protected by MFA or IP restrictions?"
+    },
+    {
+      "id": "A.8.16",
+      "name": "Monitoring Activities",
+      "category": "Monitoring",
+      "weight": "critical",
+      "breach_relevance": "No anomaly detection existed on Snowflake query behavior allowing silent exfiltration for 10 days",
+      "question": "Do you have anomaly detection covering outbound data queries from your platform?"
+    },
+    {
+      "id": "A.8.24",
+      "name": "Use of Cryptography",
+      "category": "Cryptography",
+      "weight": "high",
+      "breach_relevance": "Tokens were stored in a way that allowed extraction suggesting weak or absent encryption at rest",
+      "question": "Are authentication tokens encrypted at rest using current cryptographic standards?"
+    }
+  ]
+}

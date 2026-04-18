@@ -7,6 +7,7 @@ from src.loader import load_controls, load_vendor_responses, load_saq_responses
 from src.scorer import calculate_vendor_risk
 from src.gap_analyzer import find_gaps, summarize_gaps
 from src.saq_evaluator import evaluate_saq, get_critical_summary
+from src.report_generator import generate_pdf_report
 
 from rich.console import Console
 from rich.table import Table
@@ -176,7 +177,7 @@ def run_assessment():
     print_gap_table(gaps, gap_summary)
     print_saq_results(saq_results)
     print_footer()
-
+    generate_pdf_report(risk_summary, gaps, saq_results)
 
 if __name__ == "__main__":
     run_assessment()
